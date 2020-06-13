@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="static/main.css">
+    </head>
+    <body>
+        <h1>Palindrome Checker</h1>
+        
+        <form method="post" action="">
+            {{ form.csrf_token }}
+            Enter a string! <br> {{ form.text_field}}
+            <br>
+            <br>
+            <input type="submit" value="calculate">
+        </form>
+        <br>
+        {% if result != None%}
+            {{ result }}
+        {% endif %}
+        </body>
+</html>
